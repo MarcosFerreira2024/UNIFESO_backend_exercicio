@@ -134,7 +134,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\marco\\Vscode\\Exercicio_UNIFESO_backend\\generated\\prisma",
+      "value": "C:\\Users\\marco\\Vscode\\UNIFESO_backend\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -148,7 +148,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\marco\\Vscode\\Exercicio_UNIFESO_backend\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\marco\\Vscode\\UNIFESO_backend\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
