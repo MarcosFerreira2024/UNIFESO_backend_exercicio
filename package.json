@@ -1,0 +1,41 @@
+{
+  "name": "exercicio_unifeso_backend",
+  "version": "1.0.0",
+  "description": "Exercício UNIFESO Aluno: Marcos Vinícius Ferreira Pinto; Professor: Vagner Ereno Quincozes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --names \"GATEWAY,AUTH,PRODUCTS,ORDERS\" -c \"blue,green,yellow,magenta\" \"tsx watch gateway/server.ts\" \"tsx watch auth-service/server.ts\" \"tsx watch product-service/server.ts\" \"tsx watch order-service/server.ts\"",
+    "build": "tsc --build",
+    "start:gateway": "node dist/gateway/server.js",
+    "start:auth-service": "node dist/auth-service/server.js",
+    "start:product-service": "node dist/product-service/server.js",
+    "start:order-service": "node dist/order-service/server.js",
+    "start:all": "concurrently --names \"GATEWAY,AUTH,PRODUCTS,ORDERS\" -c \"blue,green,yellow,magenta\" \"npm run start:gateway\" \"npm run start:auth-service\" \"npm run start:product-service\" \"npm run start:order-service\"",
+    "postinstall": "prisma generate"
+  },
+  "author": "Marcos Vinícius Ferreira Pinto",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "http-proxy-middleware": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^6.8.2",
+    "sqlite": "^5.1.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "zod": "^3.25.17"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/http-proxy-middleware": "^0.19.3",
+    "@types/jsonwebtoken": "^9.0.9",
+    "concurrently": "^9.1.2"
+  }
+}
